@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185fb114097368a498cf0cc59b4cde19, type: 3}
+  m_Name: DanceData
+  m_EditorClassIdentifier: 
+  danceData:
+  - danceID: 1
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 2
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 3
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 4
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 5
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 6
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 7
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 8
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}
+  - danceID: 9
+    danceIcon: {fileID: 21300000, guid: 2dab16d2a81df534cb16e477e80d8b5c, type: 3}

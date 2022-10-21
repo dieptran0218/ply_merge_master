@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4904cca11485443973873a44e46d44, type: 3}
+  m_Name: SkinCharData
+  m_EditorClassIdentifier: 
+  skinCharData:
+  - skinCharID: 11
+    charIcon: {fileID: 21300000, guid: 872682493aaef91469e11e4dde8a77d2, type: 3}
+    charModel: {fileID: 4905730189814942495, guid: 9c313d1b0b479ec4596acc66f5a03440,
+      type: 3}
+    price: 0
+    unlockLevel: 0
+  - skinCharID: 1
+    charIcon: {fileID: 21300000, guid: 5ec9b3f90f7fb2441bb4626afa492f95, type: 3}
+    charModel: {fileID: 93991298385639035, guid: 96c69dbab79ad53499cbc8f5f61b0e5f,
+      type: 3}
+    price: 4000
+    unlockLevel: 3
+  - skinCharID: 2
+    charIcon: {fileID: 21300000, guid: 162050111ed93a944bc50e33eb9b281b, type: 3}
+    charModel: {fileID: 5905449930187595131, guid: 14b320fbf2b2d04409b42947dc54ae9b,
+      type: 3}
+    price: 4500
+    unlockLevel: 3
+  - skinCharID: 3
+    charIcon: {fileID: 21300000, guid: a7210dc15cba58b45af751118752effe, type: 3}
+    charModel: {fileID: 4546123777226210485, guid: a9cabce0bd18b5744b5cab8fc4757609,
+      type: 3}
+    price: 5500
+    unlockLevel: 6
+  - skinCharID: 4
+    charIcon: {fileID: 21300000, guid: c8937f8076241dd43be23ef59744b834, type: 3}
+    charModel: {fileID: 7128658106346978663, guid: 94e14d101b3ad3d4fb2008b59f4dc853,
+      type: 3}
+    price: 6000
+    unlockLevel: 6
+  - skinCharID: 5
+    charIcon: {fileID: 21300000, guid: 0c88851cea095bf4a91e2502ee02b6db, type: 3}
+    charModel: {fileID: 1752013398179963425, guid: 3ba12b2d0cacdb14098b95d75de7e802,
+      type: 3}
+    price: 8000
+    unlockLevel: 9
+  - skinCharID: 6
+    charIcon: {fileID: 21300000, guid: ad8cf28f9dc523940a3a82954f693a35, type: 3}
+    charModel: {fileID: 7425799747812829015, guid: d7816157ea7eeca468e66f1c9ebc2db1,
+      type: 3}
+    price: 9000
+    unlockLevel: 9
+  - skinCharID: 8
+    charIcon: {fileID: 21300000, guid: 667fe98f4f5b381489b73552be13199e, type: 3}
+    charModel: {fileID: 5147256204208505647, guid: 00141fe15cce95349bc573ab5f2d9806,
+      type: 3}
+    price: 12000
+    unlockLevel: 12
+  - skinCharID: 7
+    charIcon: {fileID: 21300000, guid: 1e54f968f13d82044b05568a35d0f932, type: 3}
+    charModel: {fileID: 78537623797275783, guid: 4bfc7751ed35bd841b611bcde9fb58b5,
+      type: 3}
+    price: 15000
+    unlockLevel: 15
+  - skinCharID: 10
+    charIcon: {fileID: 21300000, guid: 011f1c7e9e7dfff45ae31cf481d29543, type: 3}
+    charModel: {fileID: 8591261383409128285, guid: b5b4b91fc66fc2d4186782eab4d0b0b1,
+      type: 3}
+    price: 20000
+    unlockLevel: 18
+  - skinCharID: 9
+    charIcon: {fileID: 21300000, guid: 3f1f517ea64d5384597f09dc511cf8f9, type: 3}
+    charModel: {fileID: 4874952800537930791, guid: 709460f9656f0d54faf6a0aecd8b447b,
+      type: 3}
+    price: 30000
+    unlockLevel: 21

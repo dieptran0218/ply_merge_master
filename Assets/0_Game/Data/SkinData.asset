@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a70a49fd9445644a829e2a689dc2e4, type: 3}
+  m_Name: SkinData
+  m_EditorClassIdentifier: 
+  skinData:
+  - skinID: 1
+    skinIcon: {fileID: 21300000, guid: 14be117e3d27ce2419e6b8f028ff742e, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 5d2766b0bd017d74bb9b6555a2c1a181,
+      type: 3}
+    isOpenAd: 0
+    price: 3000
+    unlockLevel: 0
+  - skinID: 2
+    skinIcon: {fileID: 21300000, guid: e83bd34751b23714999d710f958e5e14, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 159e86ba72fa2b143a472fd4548e8886,
+      type: 3}
+    isOpenAd: 0
+    price: 3200
+    unlockLevel: 3
+  - skinID: 3
+    skinIcon: {fileID: 21300000, guid: a89384e44b8eba84db7144f378799c7d, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 877abfdcc5ec24849bbccb4e868aec26,
+      type: 3}
+    isOpenAd: 0
+    price: 3500
+    unlockLevel: 3
+  - skinID: 4
+    skinIcon: {fileID: 21300000, guid: ad7e377026529784b9fcbef76d295f14, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 3c7e78029cee230449f0278bc616f8cf,
+      type: 3}
+    isOpenAd: 0
+    price: 3700
+    unlockLevel: 6
+  - skinID: 5
+    skinIcon: {fileID: 21300000, guid: 2e5f4fef20de85e46a381deeba18093b, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: ba028541ad247f74e9d0cec1bf2631c4,
+      type: 3}
+    isOpenAd: 0
+    price: 3900
+    unlockLevel: 6
+  - skinID: 6
+    skinIcon: {fileID: 21300000, guid: 1206660d0c30f2e4695efce79f93a29d, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 5f2ed0021429d6243be79d3507d2a91d,
+      type: 3}
+    isOpenAd: 0
+    price: 4200
+    unlockLevel: 6
+  - skinID: 7
+    skinIcon: {fileID: 21300000, guid: 25ca82606e36b7f4b9a50f1214ce3726, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 4d461ea9425310d409f4515feb83289e,
+      type: 3}
+    isOpenAd: 0
+    price: 4400
+    unlockLevel: 9
+  - skinID: 8
+    skinIcon: {fileID: 21300000, guid: 7b84baf20565f87488078e995199c3f2, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: f9b182c6293e63c47b5dd3670080d094,
+      type: 3}
+    isOpenAd: 0
+    price: 4600
+    unlockLevel: 9
+  - skinID: 9
+    skinIcon: {fileID: 21300000, guid: 05a8986c1afb7384593eeae754a8af40, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: f6083cdfbe8276c40850d011ae781d9f,
+      type: 3}
+    isOpenAd: 0
+    price: 4900
+    unlockLevel: 9
+  - skinID: 10
+    skinIcon: {fileID: 21300000, guid: fc373f4ea36d9074194bf1af4e8817be, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: b952d55207275ea4d993a153537986c9,
+      type: 3}
+    isOpenAd: 0
+    price: 5100
+    unlockLevel: 12
+  - skinID: 11
+    skinIcon: {fileID: 21300000, guid: 162fc773b299b514ea4f3340077e0cd6, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: fc75678c86b3e234c8b4d16ca3fb6dc0,
+      type: 3}
+    isOpenAd: 0
+    price: 5250
+    unlockLevel: 12
+  - skinID: 12
+    skinIcon: {fileID: 21300000, guid: 918252f4d0133c1499eef0dbe77eebab, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 4368cd69d5f74bb4da715d63699951a8,
+      type: 3}
+    isOpenAd: 0
+    price: 5400
+    unlockLevel: 12
+  - skinID: 13
+    skinIcon: {fileID: 21300000, guid: 399b26eb78860e0479f9f1ca92714d36, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 8c90b120a0ea5af488de3e9c1d83b5e3,
+      type: 3}
+    isOpenAd: 0
+    price: 5600
+    unlockLevel: 15
+  - skinID: 14
+    skinIcon: {fileID: 21300000, guid: 3183fa0f77a8d194dbf5d3703c81f804, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: bbff96fce9637b94bbebc0f39963f0ac,
+      type: 3}
+    isOpenAd: 0
+    price: 5800
+    unlockLevel: 15
+  - skinID: 15
+    skinIcon: {fileID: 21300000, guid: 52c599ff1be57414e8f6bf884fd6d0c8, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 6db5f058fd73f4a429aa09b2126a5f7b,
+      type: 3}
+    isOpenAd: 0
+    price: 6000
+    unlockLevel: 15
+  - skinID: 16
+    skinIcon: {fileID: 21300000, guid: 0f9fc7539c154a948aa27883a6cccb37, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: c680a16af8e950b4e99595e0f53ec8e4,
+      type: 3}
+    isOpenAd: 0
+    price: 6150
+    unlockLevel: 18
+  - skinID: 17
+    skinIcon: {fileID: 21300000, guid: 5351fa0f0d6b1aa4d9dd3630db76695b, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 3385e4c8e917bf24b9d914f3d3d194d4,
+      type: 3}
+    isOpenAd: 0
+    price: 6300
+    unlockLevel: 18
+  - skinID: 18
+    skinIcon: {fileID: 21300000, guid: c6e86290c5d34cc469ed8a12b0583b81, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 31a238aaeaf3c484196077bcefb87f82,
+      type: 3}
+    isOpenAd: 0
+    price: 6500
+    unlockLevel: 21
+  - skinID: 19
+    skinIcon: {fileID: 21300000, guid: 89119acd05aca6d4596270e1259b711c, type: 3}
+    skinModel: {fileID: 919132149155446097, guid: 1b4092fc9e6034447be5608c0793c7b1,
+      type: 3}
+    isOpenAd: 0
+    price: 6750
+    unlockLevel: 21

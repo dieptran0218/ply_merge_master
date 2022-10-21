@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2635985616196345072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2635985616196345073}
+  - component: {fileID: 2635985616196345074}
+  m_Layer: 0
+  m_Name: SoundController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2635985616196345073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635985616196345072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2635985616196345074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635985616196345072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5d65b89840a764594e6485aa0f0ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSound: 1
+  OnMusic: 1
+  OnVibration: 1
+  BackgroundSound: {fileID: 0}
+  SoundOne: {fileID: 0}
+  SoundLoop: {fileID: 0}
+  HomeBg:
+    Clip: {fileID: 8300000, guid: ddb490854eced924d8e4042780a4ce78, type: 3}
+    Volume: 1
+  InGameBg:
+    Clip: {fileID: 8300000, guid: 788515fecbd334643acf971028c83507, type: 3}
+    Volume: 1
+  UIClick:
+    Clip: {fileID: 8300000, guid: 21a3c563cd329e249b6e564e28842056, type: 3}
+    Volume: 1
+  get_item:
+    Clip: {fileID: 8300000, guid: 19207cc47f7a0ba4887b7aaacffdb8b3, type: 3}
+    Volume: 1
+  get_pokemon:
+    Clip: {fileID: 8300000, guid: fc846ef348ae0b84c8aa5df0dbc490a4, type: 3}
+    Volume: 1
+  get_boom:
+    Clip: {fileID: 8300000, guid: aa43b2094d5db9c449085c0a72209cdb, type: 3}
+    Volume: 1
+  pokemon_levelup:
+    Clip: {fileID: 8300000, guid: 0a63bb6b40885d443a73c313da6054a2, type: 3}
+    Volume: 1
+  pokemon_leveldown:
+    Clip: {fileID: 8300000, guid: 07480d45448cca64ca012947aaf192ec, type: 3}
+    Volume: 1
+  throw_item:
+    Clip: {fileID: 8300000, guid: cd20013f8c00f7d43ba6f67b7ddaf9bb, type: 3}
+    Volume: 1
+  throw_key:
+    Clip: {fileID: 8300000, guid: bb690b0139556404d88cccac8d02c5af, type: 3}
+    Volume: 1
+  attack_boss_endgame:
+    Clip: {fileID: 8300000, guid: 2e3acc8703abb8b4eab410b9260d34c6, type: 3}
+    Volume: 1
+  attack_boss_blast:
+    Clip: {fileID: 8300000, guid: 127589aafbfa50a489a36333a90d1685, type: 3}
+    Volume: 1
+  tap:
+    Clip: {fileID: 8300000, guid: 4bc87816d45a15b4c906a7fc0872e0b8, type: 3}
+    Volume: 1
+  attack_special_endgame:
+    Clip: {fileID: 8300000, guid: c076a01e28b0e724294f6094bfbb42b4, type: 3}
+    Volume: 0.236
+  attack_special_impact:
+    Clip: {fileID: 8300000, guid: 6bdc4d18e6b41f7478bfae8c770a8d51, type: 3}
+    Volume: 1
+  open_chest:
+    Clip: {fileID: 8300000, guid: 5144d4c6d5e3aa44cb45e190ae4741a9, type: 3}
+    Volume: 1
+  gem_collect:
+    Clip: {fileID: 8300000, guid: 867d712663858c7408a99e99a989cf57, type: 3}
+    Volume: 1
+  update_wall:
+    Clip: {fileID: 8300000, guid: 200f8dbb1d696ac418131300e33eb77a, type: 3}
+    Volume: 1
+  firework:
+    Clip: {fileID: 8300000, guid: dc5315704f4b88849aa89b9167867a95, type: 3}
+    Volume: 1
+  player_drop_ground:
+    Clip: {fileID: 8300000, guid: 3547ddcccc2cfea4e86721d564d63d90, type: 3}
+    Volume: 1
+  unlock_pokemon_win:
+    Clip: {fileID: 8300000, guid: ef688bbbc9b652245b26b1bc12ae18b4, type: 3}
+    Volume: 1
+  boy_get_hit:
+    Clip: {fileID: 8300000, guid: c364214105a40de4aaf7aabbe4c60cee, type: 3}
+    Volume: 1
+  girl_get_hit:
+    Clip: {fileID: 8300000, guid: b175e7cfc24baaa45ae1202cb6dcd855, type: 3}
+    Volume: 1
+  ball_impact:
+    Clip: {fileID: 8300000, guid: 3021e20a19a2f8f44b447851b5248fcb, type: 3}
+    Volume: 1
+  footstep:
+    Clip: {fileID: 8300000, guid: 7260c0979bc1f3249b15ebe942fe80d1, type: 3}
+    Volume: 1
+  gameWin:
+    Clip: {fileID: 8300000, guid: a6923cbf8a3b7ad4794323b0b1fda86d, type: 3}
+    Volume: 1
+  gameLose:
+    Clip: {fileID: 8300000, guid: 32bb340d4b5969743ba03febe25a47ea, type: 3}
+    Volume: 1
+  lstPokemonAttack:
+  - Clip: {fileID: 8300000, guid: 64543d70f7dc09646a871a29a7c941fb, type: 3}
+    Volume: 1
+  - Clip: {fileID: 8300000, guid: 11053e794f7da7a4b82511b8cf258e9d, type: 3}
+    Volume: 1

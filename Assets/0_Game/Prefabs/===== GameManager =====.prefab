@@ -1,0 +1,372 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &838860208397393670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838860208397393668}
+  - component: {fileID: 838860208397393669}
+  - component: {fileID: 838860208397393691}
+  m_Layer: 0
+  m_Name: ===== GameManager =====
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &838860208397393668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838860208397393670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0276438, y: 9.633256, z: 6.839933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838860208397393669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838860208397393670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d13856a6b068cb4e81fcec85de00d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDontDestroy: 1
+  isTest: 0
+  lvTest: -1
+  pokemonTest: 0
+  mapCurrent: {fileID: 0}
+  isGamePlaying: 0
+  data:
+    gemCollected: 0
+    wallLevel: 0
+    wallUpgradeLevel: 0
+    level: 2
+    countBuyUnit: 0
+    countBuySlot: 0
+    countInsPrize: 2
+    countInsReward: 2
+    lastSpinTime: 0
+    skinUsed: 0
+    skinCollected: 
+    skinAdsId: 0
+    charUsed: 0
+    charCollected: 
+    charAdsId: 0
+    danceUsed: 0
+    danceCollected: 
+    danceAdsId: 0
+    pokemonCollected: 
+    pokemonAds: 
+    curPokemon: 0
+    loadPokemonPercent: 0
+    currentPokemon: 0
+    charType: 0
+    totalTimePlayed: 0
+    failCount: 0
+    totalCeilOpened: 3
+    endgame_CeilInfo: []
+  _isSetupDone: 0
+  canvasSelectChar: {fileID: 0}
+  timePlayed: 0
+--- !u!114 &838860208397393691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838860208397393670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3f3a99321b87b4ea949cd1ae8a7631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDontDestroy: 0
+  prefab_Chest: {fileID: 5237992315956948174, guid: ea9d4ad9ef29a7d4ba8dd80f196e7554,
+    type: 3}
+  prefab_roadWall: {fileID: 2711144296099313828, guid: f84a8759ca354884c84bcf23693052b4,
+    type: 3}
+  sprIconAds: {fileID: 21300000, guid: e3b9d01ba38fcad49a91313a06eb4881, type: 3}
+  sprIconAdsLoading: {fileID: 21300000, guid: 7c4d0d7fccba3e84483f749fd3be0951, type: 3}
+  sprButtonOff: {fileID: 21300000, guid: 1288a797e3259f54ea81bc91a6f10b43, type: 3}
+  endgameRegister: {fileID: 11400000, guid: b480510cfe86dd54cafba4fb0c00bfb8, type: 2}
+  prefab_GemKill: {fileID: 1651200594932160522, guid: 62638e216340d0f46920d29953c32bc4,
+    type: 3}
+  floatingText: {fileID: 4013683468734330935, guid: e4d032ba56dba8449a241dd2f13b955c,
+    type: 3}
+  prefab_Crystal: {fileID: 6079464395936015940, guid: 73a66db2160586941846c8b73c5729f0,
+    type: 3}
+  objPrefabPokemon: {fileID: 3778168432504040004, guid: 868fd5c7d4ed8b44b9b8cc6f854cbbd2,
+    type: 3}
+  pokemonRegister: {fileID: 11400000, guid: 2b152b51a4c504b42af2c2941dc08fa6, type: 2}
+  prefab_Bullet:
+  - type: 0
+    obj: {fileID: 1261555563981962, guid: 24c86df1468884d499ca1d5cb865a6f7, type: 3}
+  - type: 1
+    obj: {fileID: 1032096471364102, guid: 084af1218a1e0ee41a43bdf9d52aea29, type: 3}
+  - type: 2
+    obj: {fileID: 1294834399362254, guid: 9226726c851a790469d64d3093814ad4, type: 3}
+  - type: 3
+    obj: {fileID: 1878987882032996, guid: 7fa473b70378b654a84307886f90d064, type: 3}
+  - type: 4
+    obj: {fileID: 1481587283673810, guid: cf0756612a842cb4ba09ad101dd6bcb3, type: 3}
+  - type: 5
+    obj: {fileID: 1427661989262336, guid: b7c66f2237d58964783255931ae2900e, type: 3}
+  - type: 6
+    obj: {fileID: 1699459221867030, guid: 281aabf73dcc5844faf849b3dc30c1aa, type: 3}
+  - type: 7
+    obj: {fileID: 1764308443362498, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+  - type: 8
+    obj: {fileID: 1300573103503756, guid: 0f8db6274757dd4479c6d5db5b0d9e1a, type: 3}
+  - type: 9
+    obj: {fileID: 1891902229039176, guid: 9a95808365b5bbd418bb9630eeb1dae9, type: 3}
+  - type: 10
+    obj: {fileID: 1976014488594992, guid: f6846db2675565f4ca62620cf525d310, type: 3}
+  - type: 11
+    obj: {fileID: 1473103337094032, guid: 6b29274ac2e79904986a87aaee461137, type: 3}
+  - type: 12
+    obj: {fileID: 1082213743303154, guid: 4aae9ddc8b5e4a24da55b49fcc3022a4, type: 3}
+  - type: 13
+    obj: {fileID: 1261555563981962, guid: 24c86df1468884d499ca1d5cb865a6f7, type: 3}
+  - type: 14
+    obj: {fileID: 1099989291834194, guid: 831508efc40187645bc17e16b4f37501, type: 3}
+  - type: 15
+    obj: {fileID: 1347034509603832, guid: c11f2c78c638c684390d0241fd08c339, type: 3}
+  - type: 16
+    obj: {fileID: 1381080491605798, guid: 9b2879539c049394488bd7a2b3514b6c, type: 3}
+  - type: 17
+    obj: {fileID: 1531814124222292, guid: bc1c406e8debe27419da2b3a80a1ef99, type: 3}
+  - type: 18
+    obj: {fileID: 1603989468733260, guid: 5578fde9c43584c42849389b758a2040, type: 3}
+  - type: 19
+    obj: {fileID: 1481244868773408, guid: 72740f29ee533844cba431f7d8095442, type: 3}
+  - type: 20
+    obj: {fileID: 1249710063744722, guid: 5e1827a221a4ada4699ff6b2ca031caa, type: 3}
+  - type: 21
+    obj: {fileID: 1094010528761658, guid: 84deea7f5a617b14d9c8dd288d1ceb94, type: 3}
+  - type: 22
+    obj: {fileID: 1343504842343394, guid: 491de6b713e639847830438fc8d3fc28, type: 3}
+  - type: 23
+    obj: {fileID: 1311559214229084, guid: 11120fc2b8af002419bfb521d2962dac, type: 3}
+  - type: 24
+    obj: {fileID: 1079946990457772, guid: 2e10c38d7d83154429c2fb51c652e1fb, type: 3}
+  - type: 25
+    obj: {fileID: 1018882707796302, guid: 7762631b64af83148a4b7e9dc85be4ca, type: 3}
+  - type: 26
+    obj: {fileID: 1487245307642514, guid: dabd0c1fb146a3f49a4f0e33fa27dba9, type: 3}
+  - type: 27
+    obj: {fileID: 5070715396979564001, guid: 9ba554303ceaa5a43a6dc33eb0a1f96a, type: 3}
+  - type: 28
+    obj: {fileID: 1487245307642514, guid: 8d238adf7da1f35449757d8292909112, type: 3}
+  prefab_Bullet_End: {fileID: 1381080491605798, guid: 9b2879539c049394488bd7a2b3514b6c,
+    type: 3}
+  prefab_Kamezoko: {fileID: 3283264775519639453, guid: 6efe44de088b3b643883d2ea1115f5b5,
+    type: 3}
+  PokemonList:
+  - type: 1
+    img: {fileID: 21300000, guid: 8912427bfeeb14544b2ed7b32c761259, type: 3}
+    blurImg: {fileID: 21300000, guid: f1927b0198386ad4ba75560740de5762, type: 3}
+    singleImg: {fileID: 21300000, guid: abec1e2142bc70d42b77c229c8d008d3, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 57dea45ce2a90ea488d3eb11abf71f85, type: 3}
+  - type: 2
+    img: {fileID: 21300000, guid: 206cc3ad40c4ea445abf49781ce2a601, type: 3}
+    blurImg: {fileID: 21300000, guid: 6cee116e59eee57409d19a705f315d61, type: 3}
+    singleImg: {fileID: 21300000, guid: 42fa2b10f6fc9ff4196c54dfdb3ef1cd, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 8a24eb03b3c86064980a3c94fc71a9d9, type: 3}
+  - type: 3
+    img: {fileID: 21300000, guid: 19baae613825a324abccf5363c37d81d, type: 3}
+    blurImg: {fileID: 21300000, guid: 19b5d9781fdc7fa4d9acd537f8860b6d, type: 3}
+    singleImg: {fileID: 21300000, guid: 29b2fa59f0dfadc40ae73a4c0e5f8e8a, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 7bf19f3ef57fdc94abd694df530a1de7, type: 3}
+  - type: 4
+    img: {fileID: 21300000, guid: dd0ac3b2d447d5f4098faeb0191812ee, type: 3}
+    blurImg: {fileID: 21300000, guid: 9ed138e2aad76d647be5e4c7424994f3, type: 3}
+    singleImg: {fileID: 21300000, guid: 071c5e5bb82fbb2408e002f3f1d88951, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: b065c986d0015cc43ae1ac152235c221, type: 3}
+  - type: 5
+    img: {fileID: 21300000, guid: af89989f8a0c5654e8dce832d76c3cc7, type: 3}
+    blurImg: {fileID: 21300000, guid: 92be4ca964f975b4c9d4eaa69ea6fca1, type: 3}
+    singleImg: {fileID: 21300000, guid: 1aee85bea745a214ca0dc210ade5f425, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 72664e6cbf3e34e4eb895e0cef7b5cba, type: 3}
+  - type: 6
+    img: {fileID: 21300000, guid: 75dda12ee4e781841b15d67391b25ce0, type: 3}
+    blurImg: {fileID: 21300000, guid: 95f4f3b453590d4469d70c19714aea0c, type: 3}
+    singleImg: {fileID: 21300000, guid: d86578a296945ad429f29af5bf640808, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: aaa706886cdbeea4c8cda7cbdaa719e1, type: 3}
+  - type: 7
+    img: {fileID: 21300000, guid: 33ba5eb3a79e4e34f91d91e10c54f42d, type: 3}
+    blurImg: {fileID: 21300000, guid: 8682144fd5498b342ad1d7f9548f9378, type: 3}
+    singleImg: {fileID: 21300000, guid: 3041d7f2ea80c6342a87f54c6bfc8783, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 36e6c978f57f9a842a75418970fde34f, type: 3}
+  - type: 8
+    img: {fileID: 21300000, guid: 2b58ee42159b1504e89439f45cdb6018, type: 3}
+    blurImg: {fileID: 21300000, guid: 04b2b2fc26fcefd45a7c20eecb627f8f, type: 3}
+    singleImg: {fileID: 21300000, guid: fe6a2289742bc084bbebf7a37060634b, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 61146c5508485de459ac7e78e73de29b, type: 3}
+  - type: 9
+    img: {fileID: 21300000, guid: a2bdcc2b62a00c04294e42c6dd687099, type: 3}
+    blurImg: {fileID: 21300000, guid: 6294d7551bfe83348abe01d33fba1e44, type: 3}
+    singleImg: {fileID: 21300000, guid: 10136c7b57a30ae4cbd388be6242a135, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 6da7c7c8b6bb5c64998e6e708704035b, type: 3}
+  - type: 10
+    img: {fileID: 21300000, guid: 4906718a6f8ce884597ab64cefee500c, type: 3}
+    blurImg: {fileID: 21300000, guid: c411bc749b520aa4ab3c64bfb17e4291, type: 3}
+    singleImg: {fileID: 21300000, guid: 22a684acf380e654aa1b3f7f16b146ab, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 0d8164413017a68479a0522f1310bf07, type: 3}
+  - type: 11
+    img: {fileID: 21300000, guid: d94c4f0a0c555fb4d8dd23c9391748bb, type: 3}
+    blurImg: {fileID: 21300000, guid: dd5b0f290db800945a7478dcb7c264c4, type: 3}
+    singleImg: {fileID: 21300000, guid: 37ca78e016429854d90d540e2fee58d1, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 985e2f3311f7b844b87bbac63ac68994, type: 3}
+  - type: 12
+    img: {fileID: 21300000, guid: 78c731229a2d6bd419186b48ae7f7af7, type: 3}
+    blurImg: {fileID: 21300000, guid: 7c38e1fd96248184294b4b5cddc0bd8b, type: 3}
+    singleImg: {fileID: 21300000, guid: bb8dcf743bc545f4681e7043a38bf417, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 4a780f4941e7ab440bd32f871f90c804, type: 3}
+  - type: 13
+    img: {fileID: 21300000, guid: 47b5a8c8035684c42968672685aee05b, type: 3}
+    blurImg: {fileID: 21300000, guid: b87b93e15ea2e73488c8f59333708d4f, type: 3}
+    singleImg: {fileID: 21300000, guid: cfe5cff463ca44c44b20dea0f819164b, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 0f99d9d4abfa6c9449ef1cd0164b3bf7, type: 3}
+  - type: 14
+    img: {fileID: 21300000, guid: 2831b69929d896c45a4d05fa5925f3c5, type: 3}
+    blurImg: {fileID: 21300000, guid: a56325ce21c182a4bb0159dad39b3d5d, type: 3}
+    singleImg: {fileID: 21300000, guid: b959fbdec07514347af4c011b1c593d6, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 50c838565b2b27b4fa649b1fb68b4a8a, type: 3}
+  - type: 15
+    img: {fileID: 21300000, guid: 35088e3071280f644a51e5105b367c3d, type: 3}
+    blurImg: {fileID: 21300000, guid: 21c5d6aaea63abc4981dea2ae307cb59, type: 3}
+    singleImg: {fileID: 21300000, guid: 346c5371d468c82448724b74cf4ace23, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: dde8c75a7f3cc6a41948e6de480bde53, type: 3}
+  - type: 16
+    img: {fileID: 21300000, guid: f414805ef87cd7f4da2849cda09c15f3, type: 3}
+    blurImg: {fileID: 21300000, guid: 330b5223a851d354a8474c7e95cc2a2e, type: 3}
+    singleImg: {fileID: 21300000, guid: c6919156376db3442b4fd810ae761707, type: 3}
+    blurSingleImg: {fileID: 21300000, guid: 4b672ea239262d7418e299b3ec8881d6, type: 3}
+  itemIcons:
+  - type: 1
+    model: {fileID: 6340527215356818059, guid: 6c7d2e0cf048f524b90fab1389560882, type: 3}
+    icon: {fileID: 21300000, guid: aadbe32d50e123e4eb1aa5ff35dbf1af, type: 3}
+  - type: 2
+    model: {fileID: 2317249793833094650, guid: 16483ffd10de4c64ca554297b81945d1, type: 3}
+    icon: {fileID: 21300000, guid: c426d643813d4ce4d9c73ff4dc9e7d65, type: 3}
+  - type: 3
+    model: {fileID: 2154168034340157265, guid: 138107dea72a2164892e18ea33363b77, type: 3}
+    icon: {fileID: 21300000, guid: eab72e5ec55eab143b38a07d4f36ab3d, type: 3}
+  - type: 4
+    model: {fileID: 2956096616688609065, guid: 10b0bef2938c0334fbc1deb9497d025b, type: 3}
+    icon: {fileID: 21300000, guid: 7fcc3d4f09a18494bbfb4b95540b526b, type: 3}
+  - type: 5
+    model: {fileID: 6152081587329687091, guid: 2db5ece052e6b15449a6c1c88db45502, type: 3}
+    icon: {fileID: 21300000, guid: 506fbfdda4d71774daaf992c16897d93, type: 3}
+  - type: 6
+    model: {fileID: 1760237398914494880, guid: 8e4b9d49c20bb834a845180f259bb012, type: 3}
+    icon: {fileID: 21300000, guid: d4a9c55b85b13c84eb51e42e8365a183, type: 3}
+  - type: 0
+    model: {fileID: 919132149155446097, guid: 2a938041fc932f04da722ea101c97861, type: 3}
+    icon: {fileID: 21300000, guid: d4a9c55b85b13c84eb51e42e8365a183, type: 3}
+  listGateMaterial:
+  - typeColor: 0
+    matGate: {fileID: 2100000, guid: 793f9cc1e4a71bc49af355fb9eafbad5, type: 2}
+    matLand: {fileID: 2100000, guid: 4627d06b4e4661942a5f87900dbfdc4e, type: 2}
+    matDoor: {fileID: 2100000, guid: da95071ce2aa01342b0351a4712a101e, type: 2}
+  - typeColor: 1
+    matGate: {fileID: 2100000, guid: f0fde060db2023e45942e33003ae0abb, type: 2}
+    matLand: {fileID: 2100000, guid: 32f59d8e4887c4a44ac3bd5a88304a87, type: 2}
+    matDoor: {fileID: 2100000, guid: 291b84c296ec23f41acbe423c6730dcb, type: 2}
+  - typeColor: 2
+    matGate: {fileID: 2100000, guid: 267e95687a65ebb4187421d49a156a83, type: 2}
+    matLand: {fileID: 2100000, guid: 3399f72e763ea0c4ebb790b70cd330b8, type: 2}
+    matDoor: {fileID: 2100000, guid: 4ef1a85ce6991ac47bc7901be270c033, type: 2}
+  - typeColor: 3
+    matGate: {fileID: 2100000, guid: 19313241331d7b24ab5fa1b3455757b4, type: 2}
+    matLand: {fileID: 2100000, guid: 68b5d7849b41c7640b20d461b04fdff5, type: 2}
+    matDoor: {fileID: 2100000, guid: e5c65da3dcefafe4b9d1c34326c0690b, type: 2}
+  - typeColor: 4
+    matGate: {fileID: 2100000, guid: cd14647d38f8dcc498ec9f3d3030bd43, type: 2}
+    matLand: {fileID: 2100000, guid: 9586591f7055e7746aa0406f791db28c, type: 2}
+    matDoor: {fileID: 2100000, guid: 1eeb20b6fd39baa44b88c6aa5f3839e3, type: 2}
+  wall: {fileID: 11400000, guid: 0ab86f3453b69c94ca9054a6c19f2ece, type: 2}
+  listAllSkin: {fileID: 11400000, guid: e8d88760782934c44a1c453a273c6487, type: 2}
+  listCharacter: {fileID: 11400000, guid: 4ebbd2186e003b2448762fb86086dbbc, type: 2}
+  listDance: {fileID: 11400000, guid: c1f15244103e53f4dac406b24efe3334, type: 2}
+  fx_Get_Gem: {fileID: 6756036694018853721, guid: 84da0dea9d07a1f48b8a597f3c91f2cd,
+    type: 3}
+  fx_Get_Ball: {fileID: 1484450526560235849, guid: 8af23bed65f0e484a8c37caa9eeaa2c1,
+    type: 3}
+  fx_Get_Energy: {fileID: 2689439809128213787, guid: 7b55ec9022ce5234098ea015da332318,
+    type: 3}
+  fx_Get_Evolution: {fileID: 7535987860916194469, guid: 272c4588a2493a544b690c360367820e,
+    type: 3}
+  fx_Get_Boom: {fileID: 704835167742581254, guid: 3a902d0f530c4c44caef7a793629212c,
+    type: 3}
+  fx_Get_Key: {fileID: 120588709186240028, guid: f87cee34034bf2a4ebd28ed61f18f02c,
+    type: 3}
+  fx_CollectPokemon: {fileID: 388479692023685804, guid: 03efd95673c943a419dff0bf6c53b5c2,
+    type: 3}
+  fx_LevelUp: {fileID: 4025944829955284557, guid: 074c2ccdd25042846955b7e42f3a66c4,
+    type: 3}
+  fx_LevelDown: {fileID: 1953814523045708179, guid: 1566708476f19af469a16c0a3efed5d8,
+    type: 3}
+  fx_UpWall: {fileID: 6840174733100447725, guid: b221711c9e4842f4e8c0c7a13fed218b,
+    type: 3}
+  fx_FireWork_OpenChest: {fileID: 1350193950603564442, guid: d221d601bd0ba7647b995c3768159a30,
+    type: 3}
+  fx_FireWork_OpenChest_2: {fileID: 2908068398464169899, guid: 90d2ab66b00d3974690e64d38999bc2d,
+    type: 3}
+  fx_FireWork_End: {fileID: 689833082270824460, guid: b377a2a6d3d63ca4db34c88ec2be8f2a,
+    type: 3}
+  fx_ThrowTrigger: {fileID: 7559278435981753545, guid: f1d879a43637bc34ca2a47b2ac724062,
+    type: 3}
+  fx_MergeLevelUp: {fileID: 7506862544160670545, guid: 093df1c13bb1ff3478e74a4f4904d5f8,
+    type: 3}
+  fx_HitMelee_small_1: {fileID: 5689314074217037608, guid: a4b0c74c352d42248bf9346c4470a487,
+    type: 3}
+  fx_HitMelee_Big_1: {fileID: 7765753885401521050, guid: ea20f9149b2707949a57d96dd7d40997,
+    type: 3}
+  fx_Bee_Skill: {fileID: 8543580087018413234, guid: 0b745838a7a96e443be9ef893b608fe4,
+    type: 3}
+  fx_Bird_Skill: {fileID: 7778587476378213974, guid: 85db81dc32070c141b9b00e30b813388,
+    type: 3}
+  fx_Sprout_Skill: {fileID: 7008871598938732032, guid: 3e25bfbde1ba1d24c8a298e8231f3cfb,
+    type: 3}
+  fx_Ghost_Skill: {fileID: 5800449505996229053, guid: b34d2e7fa49ddc649b002a6c0a297639,
+    type: 3}
+  fx_Stun: {fileID: 746239004492767577, guid: b2e6cb4489944e0428d3d4401eff67f0, type: 3}
+  fx_Frighten: {fileID: 5396851081874753337, guid: caa909210a1e82a439c31641cb131db9,
+    type: 3}
+  fx_Frezze: {fileID: 5729791352684548041, guid: 38f46418323683d48bb3559863588c5b,
+    type: 3}
+  fx_HpHeal: {fileID: 3628616195134862184, guid: adddca84db8dcef46a6ee9f3eb5aeb98,
+    type: 3}
+  fx_Explosive: {fileID: 4368390860986437180, guid: 3aad7bcdd1cc2364dac386e57d78a835,
+    type: 3}
+  fx_Ice_Explosive: {fileID: 2979167248180079201, guid: 1bd4e040332d5aa48b8a51d8588445c9,
+    type: 3}
+  fx_Poison_Explosive: {fileID: 4663988489490961468, guid: 6f77596ea86afae40a13bedbb2aafc27,
+    type: 3}
+  fx_Poison_Screen: {fileID: 7008871598938732032, guid: 3e25bfbde1ba1d24c8a298e8231f3cfb,
+    type: 3}
+  fx_Slash: {fileID: 5471857433548486336, guid: ee595f18f3320584da51d8384a48a3ce,
+    type: 3}
+  fx_Tornado_Orange: {fileID: 6628968149819547853, guid: 9ce9344b49b9ed84eb4a4bcb0d42c1c4,
+    type: 3}
+  fx_Scopion_Earthquake: {fileID: 3674870898420065647, guid: 205a9b2ddc9e9844c908623b557d893f,
+    type: 3}
+  fx_Smoke: {fileID: 7796471455886255420, guid: ff339fd2a6b0a4c4792ba42841c5c66e,
+    type: 3}
+  fx_UnlockSlot: {fileID: 7853239010825569154, guid: 81674ec2fb0d2a642bbde49261c60771,
+    type: 3}
