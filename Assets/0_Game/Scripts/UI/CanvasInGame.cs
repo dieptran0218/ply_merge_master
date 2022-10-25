@@ -34,12 +34,12 @@ public class CanvasInGame : SingletonMonoBehaviour<CanvasInGame>
     private void Start()
     {
         //txtLevel.text = "LEVEL " + (GameManager_PLY_V2.Instance.level + 1);
-        txtGem.text = GameHelper.ConvertNumber(GameManager_PLY_V2.Instance.gemCollected);
+        //txtGem.text = GameHelper.ConvertNumber(GameManager_PLY_V2.Instance.gemCollected);
 
-        objGem.SetActive(true);
-        objBall.SetActive(false);
-        objEnergy.SetActive(false);
-        objKey.SetActive(false);
+        //objGem.SetActive(true);
+        //objBall.SetActive(false);
+        //objEnergy.SetActive(false);
+        //objKey.SetActive(false);
     }
 
 

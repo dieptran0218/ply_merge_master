@@ -860,7 +860,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5380409077056302186}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: dfcc8081a6ce38b4ba51ac9a6c2600a6, type: 3}
+  m_Avatar: {fileID: 9000000, guid: e1222a3c748323d4e8a5c4300ef71149, type: 2}
   m_Controller: {fileID: 9100000, guid: c536507131e175d40956975c7f3dd4ad, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -885,8 +885,23 @@ MonoBehaviour:
   transCanon: {fileID: 5553378354985843252}
   transHit: {fileID: 3683351212090357324}
   hpBar: {fileID: 4061764294010970848}
+  _hp1: {fileID: 0}
+  _hp2: {fileID: 0}
   typeBullet: 3
   fx_PowerUp: {fileID: 0}
+  fx_TriggerSkill: {fileID: 0}
+  listCanon: []
+  listFire: []
+  objCooldown: {fileID: 0}
+  timeCooldown: 0
+  txtTimeCooldown: {fileID: 0}
+  transTornado: {fileID: 0}
+  transTornado_1: {fileID: 0}
+  transTornado_2: {fileID: 0}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  pEnd: {fileID: 0}
+  efx_BatSkill: {fileID: 0}
   mng: {fileID: 0}
   idleCount: 0
 --- !u!1 &5380409077056302188

@@ -366,7 +366,9 @@ public class Pokemon : MonoBehaviour
         {
             if (Vector3.Distance(_target.position, transform.position) < 1.5f && info.isMelee)
             {
+                info.numMeleeType = 1;
                 return TypeAttack.Melee;
+
             }
             return TypeAttack.Range;
         }
@@ -1926,6 +1928,7 @@ public class Pokemon : MonoBehaviour
                 anim.SetInteger("stage", 3);
                 break;
             case PokemonAnimStage.Attack_Melee:
+                if (info.numMeleeType == 0) info.numMeleeType = 1;
                 anim.SetInteger("melee_stage", (_oldMelee++ % info.numMeleeType));
                 anim.SetInteger("stage", 4);
                 _isAttacking = false; 

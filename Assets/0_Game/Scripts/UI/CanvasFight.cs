@@ -54,30 +54,30 @@ public class CanvasFight : SingletonMonoBehaviour<CanvasFight>
         if (_isBlock) return;
         _costSlot = GameManager_PLY_V2.Instance.m_SlotPrice;
         _costMonster = GameManager_PLY_V2.Instance.m_MonsterPrice;
-        txtSlotCost.text = GameHelper.ConvertNumber(_costSlot);
-        txtMonsterCost.text = GameHelper.ConvertNumber(_costMonster);
+        //txtSlotCost.text = GameHelper.ConvertNumber(_costSlot);
+        //txtMonsterCost.text = GameHelper.ConvertNumber(_costMonster);
 
-        if (GameManager_PLY_V2.Instance.gemCollected > _costMonster)
-        {
-            btnMonster_Gem.SetActive(true);
-            btnMonster_Ads.SetActive(false);
-        }
-        else
-        {
-            btnMonster_Gem.SetActive(false);
-            btnMonster_Ads.SetActive(true);
-        }
+        //if (GameManager_PLY_V2.Instance.gemCollected > _costMonster)
+        //{
+        //    btnMonster_Gem.SetActive(true);
+        //    btnMonster_Ads.SetActive(false);
+        //}
+        //else
+        //{
+        //    btnMonster_Gem.SetActive(false);
+        //    btnMonster_Ads.SetActive(true);
+        //}
 
-        if (GameManager_PLY_V2.Instance.gemCollected > _costSlot)
-        {
-            btnSlot_Gem.SetActive(true);
-            btnSlot_Ads.SetActive(false);
-        }
-        else
-        {
-            btnSlot_Gem.SetActive(false);
-            btnSlot_Ads.SetActive(true);
-        }
+        //if (GameManager_PLY_V2.Instance.gemCollected > _costSlot)
+        //{
+        //    btnSlot_Gem.SetActive(true);
+        //    btnSlot_Ads.SetActive(false);
+        //}
+        //else
+        //{
+        //    btnSlot_Gem.SetActive(false);
+        //    btnSlot_Ads.SetActive(true);
+        //}
     }
 
     public void OnShow_1()
@@ -117,22 +117,22 @@ public class CanvasFight : SingletonMonoBehaviour<CanvasFight>
 
     void CheckStatusBtnSlot()
     {
-        if (GameManager_PLY_V2.Instance.totalCeilOpened >= 20)
-        {
-            cSlotAds.interactable = false;
-            cSlotAds.alpha = 0.3f;
+        //if (GameManager_PLY_V2.Instance.totalCeilOpened >= 20)
+        //{
+        //    cSlotAds.interactable = false;
+        //    cSlotAds.alpha = 0.3f;
 
-            cSlotGem.interactable = false;
-            cSlotGem.alpha = 0.3f;
-        }
-        else
-        {
-            cSlotAds.interactable = true;
-            cSlotAds.alpha = 1f;
+        //    cSlotGem.interactable = false;
+        //    cSlotGem.alpha = 0.3f;
+        //}
+        //else
+        //{
+        //    cSlotAds.interactable = true;
+        //    cSlotAds.alpha = 1f;
 
-            cSlotGem.interactable = true;
-            cSlotGem.alpha = 1f;
-        }
+        //    cSlotGem.interactable = true;
+        //    cSlotGem.alpha = 1f;
+        //}
     }
 
     void CheckStatusBtnUnit()

@@ -14,6 +14,10 @@ public class GameManager_PLY_V2 : MonoBehaviour
     public bool isGamePlaying = true;
     public Pokemon[] MonsterList;
     public Endgame_3_Ceil[] Ceil_List;
+    public Endgame_3_Ceil[] Ceil_Tmp_List;
+
+    [LunaPlaygroundField("Go to store?", 0, "Game Settings")]
+    public bool m_GoToStore = true;
     void Awake()
     {
         Instance = this;
@@ -46,5 +50,29 @@ public class GameManager_PLY_V2 : MonoBehaviour
             && CanvasInGame.ins.gameObject.activeInHierarchy) CanvasInGame.ins.ReloadGem();
         return gemCollected;
     }
+
+    public void ClickStore()
+    {
+        Luna.Unity.Playable.InstallFullGame();
+        m_GoToStore = false;
+    }
+
+    IEnumerator AutoStore()
+    {
+        yield return new WaitForSeconds(3f);
+        if (m_GoToStore)
+        {
+            ClickStore();
+        }
+    }
+
+    public void EndGame()
+    {
+        Luna.Unity.LifeCycle.GameEnded();
+        AutoStore();
+
+    }
+
+
 
 }

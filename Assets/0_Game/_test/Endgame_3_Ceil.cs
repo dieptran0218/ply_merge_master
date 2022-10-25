@@ -8,7 +8,6 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
     public CeilInfo info;
     public bool isTmp;
     public GameObject ceilLayout;
-    public GameObject fx_CanMerge;
     public bool isTrash;
 
     private bool isHold;
@@ -59,6 +58,7 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
         po1.transform.localPosition = new Vector3(0f, 0f, -0.5f);
         po1.Setup(obj, true, Mode.Normal, PokemonStage.Endgame);
         po1.SetTriggerStatus(true);
+        _mainPokemon.Clear();
         _mainPokemon.Add(po1);
         po1.transform.localScale = Vector3.one * 1.25f;
         po1.transform.localRotation = Quaternion.Euler(0, 90, 90);
@@ -66,12 +66,11 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
         PlayerController.ins.listPokemon.Add(po1);
     }
 
-    public void SpawnPokemonInCeil_2(PokemonInfo obj, CeilInfo info, bool isTmp = false)
+    public void SpawnPokemonInCeil_2(PokemonInfo obj, bool isTmp = false)
     {
         ShowCanMerge(false);
         Clear();
-
-        this.info = info;
+        _mainPokemon.Clear();
         this.isTmp = isTmp;
 
         var po1 = SimplePool.Spawn(GameConfig.ins.objPrefabPokemon, Vector3.zero, Quaternion.identity).GetComponent<Pokemon>();
@@ -97,14 +96,14 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
 
     public void ShowCanMerge(bool b)
     {
-        fx_CanMerge.SetActive(b);
-        fx_CanMerge.transform.GetChild(0).gameObject.SetActive(false);
+        //fx_CanMerge.SetActive(b);
+        //fx_CanMerge.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void ShowCanMerge_Only(bool b)
     {
-        fx_CanMerge.SetActive(b);
-        fx_CanMerge.transform.GetChild(0).gameObject.SetActive(true);
+        //fx_CanMerge.SetActive(b);
+        //fx_CanMerge.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     float GetDistanceInCeil(int lv)
@@ -115,7 +114,7 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
 
     public void Clear()
     {
-        transform.DespawnAllChild(fx_CanMerge);
+        //transform.DespawnAllChild(fx_CanMerge);
         _mainPokemon.Clear();
     }
     #endregion
@@ -242,28 +241,28 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
         var objPokemon = GameConfig.ins.GetPokemon(_ceilTrigger.info.type, lv);
         var count = _ceilTrigger.info.GetNumPokemon();
 
-        if (count == 1)
-        {
-            _ceilTrigger.SpawnPokemonInCeil_1(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
-        }
-        else if (count == 2)
-        {
-            _ceilTrigger.SpawnPokemonInCeil_2(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
-        }
+        //if (count == 1)
+        //{
+        //    _ceilTrigger.SpawnPokemonInCeil_1(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
+        //}
+        //else if (count == 2)
+        //{
+        //    _ceilTrigger.SpawnPokemonInCeil_2(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
+        //}
 
         //Sinh lai của mình
         lv = info.GetLevelPokemon();
         objPokemon = GameConfig.ins.GetPokemon(info.type, lv);
         count = info.GetNumPokemon();
 
-        if (count == 1)
-        {
-            SpawnPokemonInCeil_1(objPokemon, info, isTmp);
-        }
-        else if (count == 2)
-        {
-            SpawnPokemonInCeil_2(objPokemon, info, isTmp);
-        }
+        //if (count == 1)
+        //{
+        //    SpawnPokemonInCeil_1(objPokemon, info, isTmp);
+        //}
+        //else if (count == 2)
+        //{
+        //    SpawnPokemonInCeil_2(objPokemon, info, isTmp);
+        //}
 
 
         BackToOrigin();
@@ -271,47 +270,105 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
 
     void Merge()
     {
-        if (_ceilTrigger.info.levelUpdate != 0) _ceilTrigger.info.levelUpdate++;
-        else _ceilTrigger.info.CloneData(info);
-
-        var lv = _ceilTrigger.info.GetLevelPokemon();
-        var objPokemon = GameConfig.ins.GetPokemon(_ceilTrigger.info.type, lv);
-        var count = _ceilTrigger.info.GetNumPokemon();
-
-        if (count == 1)
+        //Debug.Log(_ceilTrigger._mainPokemon.Count);
+        if (_mainPokemon.Count == 0)
+            return;
+        //TH1: ô đích trống
+        if(_ceilTrigger._mainPokemon.Count == 0)
         {
-            _ceilTrigger.SpawnPokemonInCeil_1(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
-        }
-        else if (count == 2)
-        {
-            _ceilTrigger.SpawnPokemonInCeil_2(objPokemon, _ceilTrigger.info, _ceilTrigger.isTmp);
-        }
+            Debug.Log("Move to empty spot");
+            PokemonType tmpType = _mainPokemon[0].info.type;
+            int tmpLevel = _mainPokemon[0].info.lv;
+            var objPokemon = GameConfig.ins.GetPokemon(tmpType, tmpLevel);
+            if (_mainPokemon.Count == 1)
+            {
+                _ceilTrigger.SpawnPokemonInCeil_1(objPokemon);
+            }
+            else
+            {
+                _ceilTrigger.SpawnPokemonInCeil_2(objPokemon);
+            }
 
-        if (isTmp)
-        {
-            ceilLayout.SetActive(false);
-            Destroy(gameObject);
+            foreach (var pokemon in _mainPokemon)
+            {
+                Destroy(pokemon.gameObject);
+            }
+            _mainPokemon.Clear();
         }
         else
         {
-            //xóa ô đã merge khỏi bảng dữ liệu
-            info.ClearData();
+            List<Pokemon> oldPokemonList = new List<Pokemon>();
 
-            Clear();
-            BackToOrigin();
-        }
-
-        if (CheckMergeTmpDone() && !isFisrtDone)
-        {
-            isFisrtDone = true;
-
-            if (CanvasFight.ins.stage == 1)
+            //get all monsters
+            foreach (var pokemon in _mainPokemon)
             {
-                PlayerController.ins.MoveToEndMerge();
-                CanvasManager.ins.canvasFight.OnShow_1_2();
+                oldPokemonList.Add(pokemon);
             }
-        }
 
+            foreach (var pokemon in _ceilTrigger._mainPokemon)
+            {
+                oldPokemonList.Add(pokemon);
+            }
+
+            //get info of monsters
+            PokemonType tmpType_1 = _mainPokemon[0].info.type;
+            int tmpLevel_1 = _mainPokemon[0].info.lv;
+            var objPokemon_1 = GameConfig.ins.GetPokemon(tmpType_1, tmpLevel_1);
+            int count_1 = _mainPokemon.Count;
+
+            PokemonType tmpType_2 = _ceilTrigger._mainPokemon[0].info.type;
+            int tmpLevel_2 = _ceilTrigger._mainPokemon[0].info.lv;
+            var objPokemon_2 = GameConfig.ins.GetPokemon(tmpType_2, tmpLevel_2);
+            int count_2 = _ceilTrigger._mainPokemon.Count;
+
+
+            if(tmpType_1 != tmpType_2 || tmpLevel_1 != tmpLevel_2 || count_1 != count_2)
+            {
+                Debug.Log("Switching spot");
+                //Switch
+                //spawn monster in destination
+                if (count_1 == 1)
+                {
+                    _ceilTrigger.SpawnPokemonInCeil_1(objPokemon_1);
+                }
+                else
+                {
+                    _ceilTrigger.SpawnPokemonInCeil_2(objPokemon_1);
+                }
+
+                //spawn monster in old place
+                if (count_2 == 1)
+                {
+                    SpawnPokemonInCeil_1(objPokemon_2);
+                }
+                else
+                {
+                    SpawnPokemonInCeil_2(objPokemon_2);
+                }
+            }
+            else if(tmpType_1 == tmpType_2 && tmpLevel_1 == tmpLevel_2 && count_2 == count_1)
+            {
+                Debug.Log("Merge");
+                if (_mainPokemon.Count == 1)
+                {
+                    _ceilTrigger.SpawnPokemonInCeil_2(objPokemon_2);
+                }
+                else
+                {
+                    var new_ObjPokemon = GameConfig.ins.GetPokemon(tmpType_2, tmpLevel_2 + 1);
+                    _ceilTrigger.SpawnPokemonInCeil_1(new_ObjPokemon);
+                }
+                _mainPokemon.Clear();
+            }
+            int old_quantity = oldPokemonList.Count;
+            for (int i = 0; i < old_quantity; ++i)
+            {
+                if(oldPokemonList[i] != null)
+                Destroy(oldPokemonList[i].gameObject);
+            }
+            oldPokemonList.Clear();
+        }
+        transform.localPosition = new Vector3(0,0,0.75f);
         Endgame3_CeilManager.ins.ReloadCheckMerge();
         GameConfig.ins.SpawnFx(GameConfig.ins.fx_MergeLevelUp, _ceilTrigger.transform.position);
     }
@@ -335,14 +392,14 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
         var objPokemon = GameConfig.ins.GetPokemon(obj.type, lv);
         var count = data.GetNumPokemon();
 
-        if (count == 1)
-        {
-            SpawnPokemonInCeil_1(objPokemon, info);
-        }
-        else if (count == 2)
-        {
-            SpawnPokemonInCeil_2(objPokemon, info);
-        }
+        //if (count == 1)
+        //{
+        //    SpawnPokemonInCeil_1(objPokemon, info);
+        //}
+        //else if (count == 2)
+        //{
+        //    SpawnPokemonInCeil_2(objPokemon, info);
+        //}
     }
 
     void BackToOrigin()

@@ -23,9 +23,27 @@ public class Endgame3_CeilManager : SingletonMonoBehaviour<Endgame3_CeilManager>
 
     private void Start()
     {
+        //Init player monster
         var objPokemon = GameConfig.ins.GetPokemon(PokemonType.Bee, 2);
         GameManager_PLY_V2.Instance.Ceil_List[3].SpawnPokemonInCeil_1(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Chick, 1);
+        GameManager_PLY_V2.Instance.Ceil_List[2].SpawnPokemonInCeil_2(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Egg, 1);
+        GameManager_PLY_V2.Instance.Ceil_List[1].SpawnPokemonInCeil_1(objPokemon);
 
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Spider, 1);
+        GameManager_PLY_V2.Instance.Ceil_Tmp_List[3].SpawnPokemonInCeil_1(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Chick, 1);
+        GameManager_PLY_V2.Instance.Ceil_Tmp_List[2].SpawnPokemonInCeil_1(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Chick, 1);
+        GameManager_PLY_V2.Instance.Ceil_Tmp_List[1].SpawnPokemonInCeil_1(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Ghost, 1);
+        GameManager_PLY_V2.Instance.Ceil_Tmp_List[0].SpawnPokemonInCeil_1(objPokemon);
+        objPokemon = GameConfig.ins.GetPokemon(PokemonType.Bee, 1);
+        GameManager_PLY_V2.Instance.Ceil_Tmp_List[4].SpawnPokemonInCeil_1(objPokemon);
+
+        //objPokemon = GameConfig.ins.GetPokemon(PokemonType.Bee, 1);
+        //GameManager_PLY_V2.Instance.Ceil_Tmp_List[3].SpawnPokemonInCeil_1(objPokemon);
     }
 
     IEnumerator ie_CheckMerge()
@@ -175,7 +193,7 @@ public class Endgame3_CeilManager : SingletonMonoBehaviour<Endgame3_CeilManager>
             }
             else if(count == 2)
             {
-                scr.SpawnPokemonInCeil_2(objPokemon, t);
+                //scr.SpawnPokemonInCeil_2(objPokemon, t);
             }
             else
             {
