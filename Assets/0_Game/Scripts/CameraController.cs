@@ -54,7 +54,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public void EndCameraShop()
     {
         animHome.Play();
-        CanvasManager.ins.canvasHome.OnOpen();
+        //CanvasManager.ins.canvasHome.OnOpen();
 
         //PlayerController.ins.shopLight.SetActive(false);
         //RotateInPlace(PlayerController.ins.trans, Vector3.up * 180);

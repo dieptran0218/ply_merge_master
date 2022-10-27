@@ -102,21 +102,21 @@ public class DataManager
     public void AddUnit()
     {
         var ran = Random.Range(0, pokemonCollected.Count);
-        if (GameManager.ins.data.level == 0)
-        {
-            ran = 2;
-        }
+        //if (GameManager.ins.data.level == 0)
+        //{
+        //    ran = 2;
+        //}
         foreach (var t in endgame_CeilInfo)
         {
             if(t.levelUpdate == 0)
             {
                 t.levelUpdate = 1;
                 t.isOpen = true;
-                if (GameManager.ins.data.level == 0)
-                {
-                    t.type = PokemonType.Bee;
-                }
-                else t.type = pokemonCollected[ran];
+                //if (GameManager.ins.data.level == 0)
+                //{
+                //    t.type = PokemonType.Bee;
+                //}
+                //else t.type = pokemonCollected[ran];
                 return;
             }
         }

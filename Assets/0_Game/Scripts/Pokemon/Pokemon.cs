@@ -615,14 +615,8 @@ public class Pokemon : MonoBehaviour
         {
             PlayerController.ins.RemovePokemon(this);
             PlayerController.ins.AddPokemonDie(info.type);
-            Timer.Schedule(this, 1f, () =>
-            {
-                transform.DOLocalMoveY(transform.localPosition.y - 2f, 3f)
-                .OnComplete(() =>
-                {
-                    Destroy(gameObject);
-                });
-            });
+
+            PlayerController.ins.CheckEndGame();
         }
         else
         {
@@ -641,7 +635,6 @@ public class Pokemon : MonoBehaviour
         SetAnimation(PokemonAnimStage.Die);
         //gameObject.SetActive(false);
 
-        PlayerController.ins.CheckEndGame();
     }
 
     IEnumerator SpawnGem()
@@ -1823,7 +1816,7 @@ public class Pokemon : MonoBehaviour
             SoundController.ins.TriggerItem();
             GameConfig.ins.SpawnFx(GameConfig.ins.fx_Get_Gem, other.transform.position + _transRotate.forward * 0.75f);
             Destroy(other.gameObject);
-            GameManager.ins.data.gemCollected += 1;
+            //GameManager.ins.data.gemCollected += 1;
             CanvasInGame.ins.ReLoad(ItemType.Gem);
 
         }

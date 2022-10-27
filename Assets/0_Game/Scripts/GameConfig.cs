@@ -33,7 +33,7 @@ public class GameConfig : SingletonMonoBehaviour<GameConfig>
             return t;
         }
         else {
-            type = GameManager.ins.data.pokemonCollected[Random.Range(0, GameManager.ins.data.pokemonCollected.Count - 1)];
+            //type = GameManager.ins.data.pokemonCollected[Random.Range(0, GameManager.ins.data.pokemonCollected.Count - 1)];
             t = pokemonRegister.info.Find(x => x.type == type && x.lv == lv);
             return t;
         }
@@ -41,27 +41,28 @@ public class GameConfig : SingletonMonoBehaviour<GameConfig>
 
     public PokemonInfo GetBossRandom(PokemonType type, int lv)
     {
-        var check1 = GameManager.ins.data.pokemonCollected.Find(x => x == type);
-        var check2 = GameManager.ins.data.pokemonAds.Find(x => x == type);
+        return null;
+        //var check1 = GameManager.ins.data.pokemonCollected.Find(x => x == type);
+        //var check2 = GameManager.ins.data.pokemonAds.Find(x => x == type);
 
-        if(check1 != PokemonType.None || check2 != PokemonType.None)
-        {
-            foreach(var t in GameConfig.ins.PokemonList)
-            {
-                if (t.type == PokemonType.None) continue;
-                check1 = GameManager.ins.data.pokemonCollected.Find(x => x == t.type);
-                check2 = GameManager.ins.data.pokemonAds.Find(x => x == t.type);
-                if(check1 == PokemonType.None && check2 == PokemonType.None)
-                {
-                    return pokemonRegister.info.Find(x => x.type == t.type && x.lv == lv);
-                }
-            }
-            var c = System.Enum.GetNames(typeof(PokemonType)).Length;
-            var po = Random.Range(1, c).ToEnum<PokemonType>();
-            return pokemonRegister.info.Find(x => x.type == po && x.lv == lv);
-        }
+        //if(check1 != PokemonType.None || check2 != PokemonType.None)
+        //{
+        //    foreach(var t in GameConfig.ins.PokemonList)
+        //    {
+        //        if (t.type == PokemonType.None) continue;
+        //        check1 = GameManager.ins.data.pokemonCollected.Find(x => x == t.type);
+        //        check2 = GameManager.ins.data.pokemonAds.Find(x => x == t.type);
+        //        if(check1 == PokemonType.None && check2 == PokemonType.None)
+        //        {
+        //            return pokemonRegister.info.Find(x => x.type == t.type && x.lv == lv);
+        //        }
+        //    }
+        //    var c = System.Enum.GetNames(typeof(PokemonType)).Length;
+        //    var po = Random.Range(1, c).ToEnum<PokemonType>();
+        //    return pokemonRegister.info.Find(x => x.type == po && x.lv == lv);
+        //}
 
-        return pokemonRegister.info.Find(x => x.type == type && x.lv == lv);
+        //return pokemonRegister.info.Find(x => x.type == type && x.lv == lv);
     }
 
     #endregion

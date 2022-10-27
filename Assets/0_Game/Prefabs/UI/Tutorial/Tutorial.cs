@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Tutorial : SingletonMonoBehaviour<Tutorial>
 {
+
     public Transform transTut;
     public Transform transHand;
     public Text txtTut;
@@ -19,11 +20,6 @@ public class Tutorial : SingletonMonoBehaviour<Tutorial>
     public string tipFight;
 
     public int step = 0;
-
-    private void OnEnable()
-    {
-
-    }
 
     IEnumerator ie_Tutorial()
     {
@@ -211,6 +207,8 @@ public class Tutorial : SingletonMonoBehaviour<Tutorial>
 
     public void BtnSkip()
     {
+        SoundController.ins.UI_Click();
+        Luna.Unity.Analytics.LogEvent("Tutorial Skipped", 0);
         Destroy(gameObject);
     }
 

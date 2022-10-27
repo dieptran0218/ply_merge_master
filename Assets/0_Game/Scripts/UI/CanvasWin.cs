@@ -80,7 +80,7 @@ public class CanvasWin : MonoBehaviour
         }
         monsImg.fillAmount = (float)GameManager.ins.data.loadPokemonPercent / 100f;
         percentTxt.text = GameManager.ins.data.loadPokemonPercent.ToString() + "%";
-        giftTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
+        //giftTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
         CanvasManager.ins.canvasIngame.SetActive(false);
         lvTxt.text = "LEVEL " + (GameManager.ins.data.level + 1).ToString();
         if ((GameManager.ins.data.level + 1) % 6 == 0 || GameManager.ins.data.currentPokemon >= GameConfig.ins.PokemonList.Count)
@@ -89,7 +89,7 @@ public class CanvasWin : MonoBehaviour
             monsImgBlur.gameObject.SetActive(false);
             chestImg.SetActive(true);
             giftChestImg.SetActive(true);
-            giftChestTxt.text = ((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)).ToString();
+            //giftChestTxt.text = ((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)).ToString();
         }
 
         StartCoroutine(ie_DelaySetup(ins));
@@ -107,7 +107,7 @@ public class CanvasWin : MonoBehaviour
         float posx = range * Mathf.Sin(Time.time * 4f);
         arrow.anchoredPosition = new Vector2(posx, arrow.anchoredPosition.y);
         multiX = GetXRewardCount();
-        rewardTxt.text = GameHelper.ConvertNumber(((int)((int)(CanvasManager.ins.canvasWheel_EndGame._rw * wallXTime) * multiX)));
+        //rewardTxt.text = GameHelper.ConvertNumber(((int)((int)(CanvasManager.ins.canvasWheel_EndGame._rw * wallXTime) * multiX)));
     }
 
     private IEnumerator ie_GetCoin(int multiXTime)
@@ -119,7 +119,7 @@ public class CanvasWin : MonoBehaviour
             gemTxt.text = GameHelper.ConvertNumber((tempCoin + Random.Range(1, 3) * i));
             yield return Yielders.Get(0.01f);
         }
-        GameManager.ins.data.AddGem((int)(CanvasManager.ins.canvasWheel_EndGame._rw * wallXTime) * multiXTime);
+        //GameManager.ins.data.AddGem((int)(CanvasManager.ins.canvasWheel_EndGame._rw * wallXTime) * multiXTime);
         //FirebaseManager.Ins
             //.earn_virtual_currency("Gem"
             //, (int)(CanvasManager.ins.canvasWheel_EndGame._rw * wallXTime) * multiXTime
@@ -340,12 +340,12 @@ public class CanvasWin : MonoBehaviour
         isStop = false;
         timeKeep = 0;
 
-        txtAdsClaim.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
-        txtLv1Claim.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
-        giftTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
-        normalRewardTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
-        claimLv1Txt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
-        fullRewardTxt.text = GameHelper.ConvertNumber(((int)((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2)));
+        //txtAdsClaim.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
+        //txtLv1Claim.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
+        //giftTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
+        //normalRewardTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
+        //claimLv1Txt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2));
+        //fullRewardTxt.text = GameHelper.ConvertNumber(((int)((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins) * 2)));
 
         if (GameManager.ins.data.currentPokemon < GameConfig.ins.PokemonList.Count)
         {
@@ -359,7 +359,7 @@ public class CanvasWin : MonoBehaviour
             monsImgBlur.gameObject.SetActive(false);
             chestImg.SetActive(true);
             giftChestImg.SetActive(true);
-            giftChestTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
+            //giftChestTxt.text = GameHelper.ConvertNumber(((int)(CanvasManager.ins.canvasWheel_EndGame._rw * ins)));
         }
 
         loadPercent = GameManager.ins.data.loadPokemonPercent;

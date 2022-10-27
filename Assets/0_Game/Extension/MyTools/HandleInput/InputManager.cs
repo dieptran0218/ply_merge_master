@@ -40,6 +40,11 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (!GameManager_PLY_V2.Instance.isFirstTouched)
+                {
+                    GameManager_PLY_V2.Instance.isFirstTouched = true;
+                    Tutorial.ins.BtnSkip();
+                }
                 touchPos = Input.mousePosition;
                 inputState = INPUT_STATE.TOUCHING;
                 OnTouch?.Invoke(Input.mousePosition);

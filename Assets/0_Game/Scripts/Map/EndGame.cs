@@ -49,7 +49,7 @@ public class EndGame : MonoBehaviour
             && PlayerController.ins != null
         );
 
-        ceilManager.Setup(GameManager.ins.data.totalCeilOpened);
+        //ceilManager.Setup(GameManager.ins.data.totalCeilOpened);
 
         if (GameManager.ins.mapCurrent.typeEndGame == EndGameType.Combat_Normal)
         {

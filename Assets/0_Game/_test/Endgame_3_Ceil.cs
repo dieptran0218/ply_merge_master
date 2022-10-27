@@ -276,7 +276,7 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
         //TH1: ô đích trống
         if(_ceilTrigger._mainPokemon.Count == 0)
         {
-            Debug.Log("Move to empty spot");
+            //Debug.Log("Move to empty spot");
             PokemonType tmpType = _mainPokemon[0].info.type;
             int tmpLevel = _mainPokemon[0].info.lv;
             var objPokemon = GameConfig.ins.GetPokemon(tmpType, tmpLevel);
@@ -324,7 +324,7 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
 
             if(tmpType_1 != tmpType_2 || tmpLevel_1 != tmpLevel_2 || count_1 != count_2)
             {
-                Debug.Log("Switching spot");
+                //Debug.Log("Switching spot");
                 //Switch
                 //spawn monster in destination
                 if (count_1 == 1)
@@ -348,7 +348,7 @@ public class Endgame_3_Ceil : MonoBehaviour, IElement
             }
             else if(tmpType_1 == tmpType_2 && tmpLevel_1 == tmpLevel_2 && count_2 == count_1)
             {
-                Debug.Log("Merge");
+                //Debug.Log("Merge");
                 if (_mainPokemon.Count == 1)
                 {
                     _ceilTrigger.SpawnPokemonInCeil_2(objPokemon_2);

@@ -12,10 +12,10 @@ public partial class SoundController : MonoBehaviour
     public bool OnVibration = true;
 
     //Nhạc nền
-    [HideInInspector] public AudioSource BackgroundSound;
+    public AudioSource BackgroundSound;
 
     //Sound phát 1 lần, thường là sound effect
-    [HideInInspector] public AudioSource SoundOne;
+    public AudioSource SoundOne;
 
     //Sound phát lặp lại, thường là sound effect
     [HideInInspector] public AudioSource SoundLoop;
@@ -31,8 +31,6 @@ public partial class SoundController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        BackgroundSound = gameObject.AddComponent<AudioSource>();
-        SoundOne = gameObject.AddComponent<AudioSource>();
         SoundLoop = gameObject.AddComponent<AudioSource>();
     }
 
@@ -93,10 +91,10 @@ public partial class SoundController : MonoBehaviour
     public void PlayBgSound()
     {
         PlayBackgroundSound(ins.HomeBg);
-        Timer.Schedule(this, ins.InGameBg.Clip.length, () =>
-        {
-            PlayBackgroundSound(ins.InGameBg);
-        });
+        //Timer.Schedule(this, ins.InGameBg.Clip.length, () =>
+        //{
+        //    PlayBackgroundSound(ins.InGameBg);
+        //});
     }
 
     public void PlayBg(AudioClip clip, float volume = 1f, bool loop = true)

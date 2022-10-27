@@ -63,16 +63,16 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         if (oldModel != null)
             GameObject.Destroy(oldModel.gameObject);
-        SkinCharData currentChar = GameManager.ins.data.GetChar(GameManager.ins.data.charUsed);
-        GameObject charModel = Instantiate(currentChar.charModel);
-        charModel.transform.parent = playerHolder;
-        charModel.transform.localScale = Vector3.one * 0.8f;
-        charModel.transform.localPosition = new Vector3(0, 0, 0);
-        charModel.transform.rotation = Quaternion.Euler(0, 180, 0);
-        oldModel = charModel.transform;
-        anim = charModel.GetComponent<Animator>();
-        skinParent = charModel.transform;
-        transRotate = charModel.transform;
+        //SkinCharData currentChar = GameManager.ins.data.GetChar(GameManager.ins.data.charUsed);
+        //GameObject charModel = Instantiate(currentChar.charModel);
+        //charModel.transform.parent = playerHolder;
+        //charModel.transform.localScale = Vector3.one * 0.8f;
+        //charModel.transform.localPosition = new Vector3(0, 0, 0);
+        //charModel.transform.rotation = Quaternion.Euler(0, 180, 0);
+        //oldModel = charModel.transform;
+        //anim = charModel.GetComponent<Animator>();
+        //skinParent = charModel.transform;
+        //transRotate = charModel.transform;
     }
 
     public void Setup()
@@ -352,25 +352,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     public bool CheckEndGame()
     {
-        if (stage == PlayerStage.EndGame_Win) return true;
-        if (stage == PlayerStage.EndGame_Lose) return false;
-
-        if (_endgame == null) return false;
-
-        if (_endgame._lstPokemonBoss.Count == 0)
-        {
-            Time.timeScale = 1f;
-            StartCoroutine(ie_WinAction());
-            stage = PlayerStage.EndGame_Win;
-            return true;
-        }
 
         if (listPokemon.Count == 0)
         {
             Time.timeScale = 1f;
             StartCoroutine(ie_LoseAction());
             stage = PlayerStage.EndGame_Lose;
+            GameManager_PLY_V2.Instance.EndGame();
             return true;
+
         }
 
         return false;
@@ -400,7 +390,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
         CanvasManager.ins.OpenWheel_EndGame((int)(GameManager.ins.GetRewardEndGame()), true);
 
-        yield return new WaitUntil(() => CanvasManager.ins.canvasWheel_EndGame.isDone);
+        //yield return new WaitUntil(() => CanvasManager.ins.canvasWheel_EndGame.isDone);
 
         _isEndgame = true;
 
@@ -412,25 +402,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             t.SetWin();
         }
         yield return Yielders.Get(0.2f);
-        if (stage == PlayerStage.EndGame_Win) CanvasManager.ins.canvasWin.OnOpen(1);
-        else if (stage == PlayerStage.EndGame_Lose) CanvasManager.ins.canvasFail.OnOpen(0);
+        //if (stage == PlayerStage.EndGame_Win) CanvasManager.ins.canvasWin.OnOpen(1);
+        //else if (stage == PlayerStage.EndGame_Lose) CanvasManager.ins.canvasFail.OnOpen(0);
 
     }
 
     IEnumerator ie_LoseAction()
     {
-        foreach (var t in _endgame._lstPokemonBoss) t.stage = PokemonStage.Win;
-
-        yield return Yielders.Get(2f);
-
-        //if (GameManager.ins.data.level >= 2) AdsManager.Ins.ShowInterstitial("endgame_lose");
-        //else if (AdsManager.Ins.isShowAdsInLv1_2) AdsManager.Ins.ShowInterstitial("endgame_lose");
-
-        CanvasManager.ins.OpenWheel_EndGame((int)(GameManager.ins.GetRewardEndGame() * GetFailRatio()), false);
-
-        yield return new WaitUntil(() => CanvasManager.ins.canvasWheel_EndGame.isDone);
-
-        GameManager.ins.ReLoadGame();
+        yield return new WaitForSeconds(0.8f);
+        CanvasManager.ins.OpenFail();
     }
 
     public float GetFailRatio()
@@ -581,7 +561,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             SoundController.ins.TriggerItem();
             GameConfig.ins.SpawnFx(GameConfig.ins.fx_Get_Gem, other.transform.position + transRotate.forward * 0.75f);
             Destroy(other.gameObject);
-            GameManager.ins.data.gemCollected += 1;
+            //GameManager.ins.data.gemCollected += 1;
             CanvasInGame.ins.ReLoad(ItemType.Gem);
         }
         else if (other.tag.Equals("Energy"))
@@ -682,7 +662,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 }
                 GameManager.ins.mapCurrent.listWave.Clear();
                 PlayerEndgame(e);
-                CanvasManager.ins.canvasEvolution.OnClose();
+                //CanvasManager.ins.canvasEvolution.OnClose();
             }
         }
         else if (other.tag.Equals("Limit"))
@@ -792,7 +772,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 evolutionCollected += value;
                 break;
             case ItemType.Gem:
-                GameManager.ins.data.gemCollected += value;
+                //GameManager.ins.data.gemCollected += value;
                 break;
             case ItemType.Key:
                 keyCollected += value;
@@ -986,26 +966,26 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         var skin = GameConfig.ins.listAllSkin.skinData.Find(x => x.skinID == id);
         if (skin != null)
         {
-            if (GameManager.ins.data.charUsed == CharacterType.Cleopat)
-            {
-                if (_skinUsed != null) SimplePool.Despawn(_skinUsed);
-                var o = SimplePool.Spawn(skin.skinModel, Vector3.zero, Quaternion.identity);
-                o.transform.SetParent(skinParent);
-                o.transform.localScale = Vector3.one;
-                o.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                o.transform.localPosition = new Vector3(0, -0.185f, 0.037f);
-                _skinUsed = o;
-            }
-            else
-            {
-                if (_skinUsed != null) SimplePool.Despawn(_skinUsed);
-                var o = SimplePool.Spawn(skin.skinModel, Vector3.zero, Quaternion.identity);
-                o.transform.SetParent(skinParent);
-                o.transform.localScale = Vector3.one;
-                o.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                o.transform.localPosition = new Vector3(0, -0.269f, 0.1f);
-                _skinUsed = o;
-            }
+            //if (GameManager.ins.data.charUsed == CharacterType.Cleopat)
+            //{
+            //    if (_skinUsed != null) SimplePool.Despawn(_skinUsed);
+            //    var o = SimplePool.Spawn(skin.skinModel, Vector3.zero, Quaternion.identity);
+            //    o.transform.SetParent(skinParent);
+            //    o.transform.localScale = Vector3.one;
+            //    o.transform.localRotation = Quaternion.Euler(Vector3.zero);
+            //    o.transform.localPosition = new Vector3(0, -0.185f, 0.037f);
+            //    _skinUsed = o;
+            //}
+            //else
+            //{
+            //    if (_skinUsed != null) SimplePool.Despawn(_skinUsed);
+            //    var o = SimplePool.Spawn(skin.skinModel, Vector3.zero, Quaternion.identity);
+            //    o.transform.SetParent(skinParent);
+            //    o.transform.localScale = Vector3.one;
+            //    o.transform.localRotation = Quaternion.Euler(Vector3.zero);
+            //    o.transform.localPosition = new Vector3(0, -0.269f, 0.1f);
+            //    _skinUsed = o;
+            //}
         }
     }
 }

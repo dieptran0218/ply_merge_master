@@ -179,7 +179,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         CanvasManager.ins.CloseHome();
         if (mapCurrent.typeEndGame == EndGameType.BigMonster)
         {
-            CanvasManager.ins.canvasEvolution.OnOpen();
+            //CanvasManager.ins.canvasEvolution.OnOpen();
         }
         CanvasManager.ins.OpenIngame();
     }

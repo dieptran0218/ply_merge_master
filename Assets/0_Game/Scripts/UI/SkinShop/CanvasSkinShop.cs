@@ -103,7 +103,7 @@ public class CanvasSkinShop : SingletonMonoBehaviour<CanvasSkinShop>
 
     public void OnOpen()
     {
-        CanvasManager.ins.canvasHome.OnClose();
+        //CanvasManager.ins.canvasHome.OnClose();
         gameObject.SetActive(true);
         PlayerController.ins.stage = PlayerStage.IdleShop;
         PlayerController.ins.ReloadAnimation();
